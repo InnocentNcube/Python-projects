@@ -1,19 +1,10 @@
-import time
+class Worker:
+
+    def __init__(self, name, age, city):
+        self.name = "Kasia"
+        self.age = age
 
 
-def fib():
-    a, b = 0, 1
-    while True:
-        yield b
-        a, b = b, a + b
-
-
-g = fib()
-
-try:
-    for e in g:
-        print(e)
-        time.sleep(1)
-
-except KeyboardInterrupt:
-    print("Calculation stopped")
+worker = Worker("Anna", 23, "Warsaw")
+print(worker.name)
+print(worker.city)
